@@ -4,10 +4,10 @@ USE PCSM;
 
 CREATE TABLE User (
     UserID varchar (255) PRIMARY KEY,
-    UserFirstName varchar (255) NULL,
-    UserLastName varchar (255) NULL,
-    UserEmail varchar (255) NULL,
-    UserPassword varchar (255) NULL,
+    UserFirstName varchar (50) NULL,
+    UserLastName varchar (50) NULL,
+    UserEmail varchar (50) NULL,
+    UserPassword varchar (50) NULL,
     ProfileDesc varchar (255) NULL,
     ProfilePic varchar(255) NULL
 );
@@ -33,7 +33,7 @@ CREATE TABLE MediaFile (
 CREATE TABLE Comments (
     CommentID int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     CmtAttachement varchar (255),
-    CommentTimeStamp varchar (255),
+    CommentTimeStamp DATE NOT NULL,
     CommentText varchar (255),
     CommentStyle varchar (255),
     UserID varchar(255) NOT NULL,
